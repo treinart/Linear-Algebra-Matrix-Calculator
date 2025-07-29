@@ -3,10 +3,10 @@
 
 ---
 
-A full-featured, modern matrix and vector calculator for linear algebra, built for real understanding—not just answers.  
+A full-featured, modern matrix and vector calculator for linear algebra, built for real understanding. Not just answers.  
 Get instant solutions for 56 operations, each explained in clear language with step-by-step math, background, and practical context.
 
-> Every operation is broken down into clear, logical steps so you can follow the math—not just the final answer.
+> Every operation is broken down into clear, logical steps so you can follow the math, not just the final answer.
 
 ---
 
@@ -21,8 +21,8 @@ Whether you need a quick answer or want to see each step laid out, this tool cov
 ## Features
 
 - **Step-by-step solutions** for 50+ matrix and vector operations.
-- **Detailed math breakdowns**—see how the result is built, line by line.
-- **Modern, easy-to-use interface**—just download, open, and use.
+- **Detailed math breakdowns** see how the result is built, line by line.
+- **Modern, easy-to-use interface** just download, open, and use.
 - **Python scripts included** for running or checking the math in code.
 
 ---
@@ -33,12 +33,12 @@ Whether you need a quick answer or want to see each step laid out, this tool cov
 2. Find the main file:  
    `Matrix Calculator vFINAL.html`
 3. **Double-click** the HTML file, or right-click and choose “Open with” and select your web browser.
-4. The calculator will open in your browser—no installation or sign-in needed.
+4. The calculator will open in your browser, no installation or sign-in needed.
 5. Choose an operation, enter your data, and click Calculate.
 6. You’ll see a detailed, step-by-step breakdown, including what the operation means and how to do it by hand.
    
 > **Python scripts:**  
-> Python users: All included Python files show step-by-step math for each operation—great for running in a terminal or Jupyter notebook.
+> Python users: All included Python files show step-by-step math for each operation, great for running in a terminal or Jupyter notebook.
 
 ---
 
@@ -125,7 +125,7 @@ See the screenshots for examples of how every concept is broken down.
 
 - Covers all standard linear algebra topics.
 - Step-by-step math and plain-English overviews for each operation.
-- Clean, modern interface—no login, no setup, no bloat.
+- Clean, modern interface. No login or setup.  
 - Python files for offline/advanced math or scripting.
 
 ---
@@ -154,6 +154,7 @@ See the LICENSE file for details.
 >See the `/python` folder README and LICENSE notice for details.
 ---
 
-&copy; 2025 Travis Reinart  
-Built for anyone who wants to finally understand linear algebra.
+### &copy; 2025 Travis Reinart  
+### Built for anyone who wants to finally understand linear algebra.
 
+___
