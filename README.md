@@ -142,13 +142,16 @@ matrix calculator, step-by-step matrix calculator, linear algebra calculator, ma
 
 ## License
 
-This project is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License.  
+The main Matrix Calculator (HTML, CSS, and JavaScript) is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). See the LICENSE file for details.  
+
 You may use and share it freely with credit, but you may not modify or distribute modified versions.  
+
 See the LICENSE file for details.
 
 [![CC BY-ND 4.0](https://licensebuttons.net/l/by-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nd/4.0/)
 
-
+>All Python scripts in the `/python` folder are licensed under the MIT License.  
+>See the `/python` folder README and LICENSE notice for details.
 ---
 
 &copy; 2025 Travis Reinart  
