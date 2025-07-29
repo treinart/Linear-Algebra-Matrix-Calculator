@@ -26,6 +26,9 @@ This folder contains Python scripts for all 56 matrix and vector operations supp
 
 ### © 2025 Travis Reinart  
 Licensed under the MIT License.  
+
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit/)  
+
 See [https://opensource.org/license/mit/](https://opensource.org/license/mit/) for details.
 
 ---
