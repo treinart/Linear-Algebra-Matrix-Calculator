@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://treinart.github.io/Linear-Algebra-Matrix-Calculator/sitemap.xml

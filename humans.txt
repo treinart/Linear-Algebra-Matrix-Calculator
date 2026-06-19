@@ -1,0 +1,11 @@
+/* TEAM */
+Creator: Travis Reinart
+GitHub: https://github.com/treinart
+LinkedIn: https://www.linkedin.com/in/travis-reinart/
+
+/* SITE */
+Name: Linear Algebra Matrix Calculator
+URL: https://treinart.github.io/Linear-Algebra-Matrix-Calculator/
+Description: Free interactive linear algebra matrix calculator with step-by-step educational explanations.
+Stack: Static HTML, CSS, and JavaScript
+Standards: HTML5, CSS3

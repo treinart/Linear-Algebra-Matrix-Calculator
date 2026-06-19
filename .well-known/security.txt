@@ -1,0 +1,4 @@
+Contact: https://www.linkedin.com/in/travis-reinart/
+Expires: 2027-06-19T00:00:00Z
+Preferred-Languages: en
+Canonical: https://treinart.github.io/Linear-Algebra-Matrix-Calculator/.well-known/security.txt

@@ -1,0 +1,18 @@
+# Linear Algebra Matrix Calculator
+
+> Free interactive linear algebra matrix calculator with step-by-step educational explanations for matrix and vector operations.
+
+Canonical URL: https://treinart.github.io/Linear-Algebra-Matrix-Calculator/
+
+## Pages
+
+- [Interactive Matrix Calculator](https://treinart.github.io/Linear-Algebra-Matrix-Calculator/): Browser-based calculator for matrix addition, multiplication, inverses, RREF, determinants, eigenvalues, Hessian matrices, vector operations, decompositions, and related linear algebra topics.
+
+## Use
+
+This site is intended for students and self-learners who want worked linear algebra calculations and explanations. The calculator runs entirely in the browser.
+
+## Attribution
+
+Creator: Travis Reinart
+Repository: https://github.com/treinart/Linear-Algebra-Matrix-Calculator

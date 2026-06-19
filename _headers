@@ -1,0 +1,18 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/favicon.ico/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/AI_Matrix_Background.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/preview-image.jpg.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/site.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=3600

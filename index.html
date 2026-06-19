@@ -13,6 +13,8 @@ GitHub: https://github.com/treinart
 -->
 
 <!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="google2fae6923dc85e87d" />
@@ -21,16 +23,26 @@ GitHub: https://github.com/treinart
 <meta name="description" content="Master linear algebra with the free ultimate step-by-step matrix calculator. Solve for eigenvalues, inverse matrices, Hessian Matrix, RREF, and more. Get detailed, educational explanations for over 50 operations. Perfect web-based educational tool for students and self-learners.">
 <meta name="keywords" content="matrix calculator, linear algebra, eigenvalues, eigenvectors, hessian matrix, dot product, SVD, transpose, inverse matrix, educational math tool, cramer's rule, rref calculator">
 <link rel="canonical" href="https://treinart.github.io/Linear-Algebra-Matrix-Calculator/">
+<link rel="icon" href="favicon.ico/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-icon-180x180.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#020617">
+<meta name="msapplication-TileColor" content="#020617">
+<meta name="msapplication-config" content="browserconfig.xml">
 
 <meta property="og:title" content="Interactive Matrix Calculator | Step-by-Step Linear Algebra">
 <meta property="og:description" content="A free, educational tool that provides detailed, step-by-step solutions for over 50 linear algebra operations.">
-<meta property="og:image" content="https://github.com/treinart/Linear-Algebra-Matrix-Calculator/blob/main/preview-image.jpg.png?raw=true">
+<meta property="og:image" content="https://treinart.github.io/Linear-Algebra-Matrix-Calculator/preview-image.jpg.png">
 <meta property="og:url" content="https://treinart.github.io/Linear-Algebra-Matrix-Calculator/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Linear Algebra Matrix Calculator">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Interactive Matrix Calculator | Step-by-Step Linear Algebra">
 <meta name="twitter:description" content="A free, educational tool that provides detailed, step-by-step solutions for over 50 linear algebra operations.">
-<meta name="twitter:image" content="https://github.com/treinart/Linear-Algebra-Matrix-Calculator/blob/main/preview-image.jpg.png?raw=true">
+<meta name="twitter:image" content="https://treinart.github.io/Linear-Algebra-Matrix-Calculator/preview-image.jpg.png">
 
 <script type="application/ld+json">
 {
@@ -58,16 +70,334 @@ GitHub: https://github.com/treinart
     }
 }
 </script>
+    <style>
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
 
-    <html lang="en"></html>
-    <head>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Exo+2:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+button,
+input,
+select {
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    text-transform: none;
+}
+
+.container {
+    width: 100%;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-grid {
+    display: inline-grid;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.max-w-7xl {
+    max-width: 80rem;
+}
+
+.min-h-\[70px\] {
+    min-height: 70px;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.rounded-b-xl {
+    border-bottom-right-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.bg-blue-600 {
+    background-color: #2563eb;
+}
+
+.hover\:bg-red-600:hover {
+    background-color: #dc2626;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-white\/80 {
+    color: rgb(255 255 255 / 0.8);
+}
+
+.text-gray-200 {
+    color: #e5e7eb;
+}
+
+.text-gray-300 {
+    color: #d1d5db;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.hessian-formula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.symbolic-matrix .matrix-content td {
+    min-width: 7.5rem;
+    font-size: 1rem;
+}
+
+.math-frac {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.math-frac span:first-child {
+    width: 100%;
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid currentColor;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+
+    .sm\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .md\:p-8 {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    .lg\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+.max-w-7xl {
+    max-width: 80rem;
+}
+
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
@@ -75,7 +405,7 @@ GitHub: https://github.com/treinart
         :root { --red-accent: #dc2626; --blue-accent: #2563EB; }
         body { 
             font-family: 'Inter', sans-serif; color: #E5E7EB;
-            background-image: url('https://raw.githubusercontent.com/treinart/Linear-Algebra-Matrix-Calculator/main/AI_Matrix_Background.jpg');
+            background-image: url('AI_Matrix_Background.jpg');
             background-size: 100% auto;
             background-repeat: no-repeat; background-attachment: fixed; background-position: center;
         }
@@ -707,6 +1037,7 @@ GitHub: https://github.com/treinart
         principalMinors(m) { const minors = []; for (let k = 1; k <= m.length; k++) { const submatrix = m.slice(0, k).map(row => row.slice(0, k)); minors.push(this.determinant(submatrix)); } return minors; },
         createPermutationMatrix(p) { const n = p.length; const I = Array(n).fill(0).map(() => Array(n).fill(0)); for(let i=0; i<n; i++) I[i][i] = 1; const P = Array(n).fill(0).map(() => Array(n).fill(0)); for(let i=0; i<n; i++) { P[i] = I[p[i]-1]; } return P; },
         rref(matrix, steps = false) { let mat = matrix.map(row => [...row]); let lead = 0; const rowCount = mat.length; const colCount = mat[0].length; const stepLog = [{ matrix: mat.map(r => [...r]), text: "Starting Matrix" }]; for (let r = 0; r < rowCount; r++) { if (colCount <= lead) break; let i = r; while (Math.abs(mat[i][lead]) < 1e-9) { i++; if (rowCount === i) { i = r; lead++; if (colCount === lead) return steps ? stepLog : mat; } } if (i !== r) { [mat[i], mat[r]] = [mat[r], mat[i]]; stepLog.push({ matrix: mat.map(r => [...r]), text: `Swap R${i+1} and R${r+1}` }); } let val = mat[r][lead]; if (Math.abs(val - 1) > 1e-9) { for (let j = 0; j < colCount; j++) mat[r][j] /= val; stepLog.push({ matrix: mat.map(r => [...r]), text: `Scale R${r+1} by 1/${this.smartFormat(val)}` }); } for (let i = 0; i < rowCount; i++) { if (i === r) continue; val = mat[i][lead]; if (Math.abs(val) > 1e-9) { for (let j = 0; j < colCount; j++) mat[i][j] -= val * mat[r][j]; stepLog.push({ matrix: mat.map(r => [...r]), text: `Add -${this.smartFormat(val)} &times; R${r+1} to R${i+1}` }); } } lead++; } return steps ? stepLog : mat; },
+        rowEchelon(matrix) { let mat = matrix.map(row => [...row]); let lead = 0; const rowCount = mat.length; const colCount = mat[0].length; for (let r = 0; r < rowCount && lead < colCount; r++) { let i = r; while (i < rowCount && Math.abs(mat[i][lead]) < 1e-9) i++; if (i === rowCount) { lead++; r--; continue; } if (i !== r) [mat[i], mat[r]] = [mat[r], mat[i]]; const pivot = mat[r][lead]; if (Math.abs(pivot) > 1e-9 && Math.abs(pivot - 1) > 1e-9) { for (let j = lead; j < colCount; j++) mat[r][j] /= pivot; } for (let i = r + 1; i < rowCount; i++) { const factor = mat[i][lead]; if (Math.abs(factor) > 1e-9) { for (let j = lead; j < colCount; j++) mat[i][j] -= factor * mat[r][j]; } } lead++; } return mat.map(row => row.map(val => Math.abs(val) < 1e-9 ? 0 : val)); },
         rank(m) { const reduced = this.rref(m); return reduced.filter(row => row.some(val => Math.abs(val) > 1e-9)).length; },
         isEqual(m1, m2) { if (!m1 || !m2 || m1.length !== m2.length || m1[0].length !== m2[0].length) return false; for (let i = 0; i < m1.length; i++) for (let j = 0; j < m1[0].length; j++) if (Math.abs(m1[i][j] - m2[i][j]) > 1e-9) return false; return true; },
         isSymmetric(m) { return m.length === m[0].length && this.isEqual(m, this.transpose(m)); },
@@ -832,7 +1163,7 @@ GitHub: https://github.com/treinart
         return html;
     }
     function getDeterminantRankExplanation(m) { let html = '<div class="explainer-container">'; const isSquare = m.length === m[0].length; if(isSquare) { html += `<h3>Determinant</h3><p class="explainer-text">The determinant is a special number that can be calculated from a square matrix.</p><div class="formula-box">det(A) = ${mtx.smartFormat(mtx.determinant(m))}</div>`; } html += `<h3>Rank</h3><p class="explainer-text">The rank of a matrix is the number of linearly independent rows or columns. We find it by reducing the matrix to Row Echelon Form and counting the non-zero rows.</p><div class="matrix-display-container">${mtx.formatToHTML(mtx.rref(m))}</div><div class="formula-box">Rank(A) = ${mtx.rank(m)}</div>`; html += '</div>'; return html; }
-    function getRefExplanation(m) { let html = '<div class="explainer-container">'; html += `<h3>Row Echelon Form (REF)</h3><p class="explainer-text">This is the Row Echelon Form of the matrix, found using Gaussian elimination.</p><div class="matrix-display-container">${mtx.formatToHTML(mtx.rref(m))}</div>`; html += '</div>'; return html; }
+    function getRefExplanation(m) { let html = '<div class="explainer-container">'; html += `<h3>Row Echelon Form (REF)</h3><p class="explainer-text">This is the Row Echelon Form of the matrix, found using Gaussian elimination. Entries below each pivot are zero, but entries above pivots are not cleared as they are in RREF.</p><div class="matrix-display-container">${mtx.formatToHTML(mtx.rowEchelon(m))}</div>`; html += '</div>'; return html; }
     function getRrefStepsExplanation(m) { const steps = mtx.rref(m, true); let html = '<div class="explainer-container">'; html += `<h3>Step-by-Step Reduced Row Echelon Form (RREF)</h3>`; steps.forEach(step => { html += `<p class="explainer-text mt-8"><strong>${step.text}:</strong></p><div class="matrix-display-container">${mtx.formatToHTML(step.matrix)}</div>`; }); html += `<h3>Final RREF</h3><div class="matrix-display-container">${mtx.formatToHTML(steps[steps.length-1].matrix)}</div>`; html += '</div>'; return html; }
     function getSolveAxbExplanation(m, v) { let html = '<div class="explainer-container">'; html += `<h3>Solve Ax = b</h3><p class="explainer-text">To solve for the vector x in the equation Ax = b, we can use the inverse of matrix A. The solution is found by the formula: x = A<sup>-1</sup>b.</p><h3>Step 1: Find the inverse of A (A<sup>-1</sup>)</h3><p class="explainer-text">(For a detailed breakdown of the inverse calculation, please see the 'Identity & Inverse' tab.)</p>`; const invA = mtx.inverse(m); if (!invA) { html += `<p class="explainer-text">The matrix A is singular (determinant is 0) and does not have an inverse. This system does not have a unique solution.</p>`; } else { html += `<div class="matrix-display-container">${mtx.formatToHTML(invA)}</div><h3>Step 2: Multiply A<sup>-1</sup> by b</h3><div class="matrix-display-container">${mtx.formatToHTML(invA)} <span class="operator">&middot;</span> ${mtx.formatToHTML(v)}</div><h3>Step 3: Final Solution (x)</h3>`; const x = mtx.multiply(invA, v.map(val => [val])).map(row => row[0]); html += `<div class="matrix-display-container">${mtx.formatToHTML(x)}</div>`; } html += `</div>`; return html; }
     function getLeastSquaresExplanation(m, v) { let html = '<div class="explainer-container">'; html += `<h3>Least Squares Solution</h3><p class="explainer-text">When a system Ax = b has no direct solution (often because A is not square), we can find the "best fit" solution using the least squares method. The formula is: x = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b.</p><h3>Step 1: Calculate the transpose of A (A<sup>T</sup>)</h3>`; const aT = mtx.transpose(m); html += `<div class="matrix-display-container">${mtx.formatToHTML(aT)}</div><h3>Step 2: Calculate A<sup>T</sup>A</h3>`; const aTa = mtx.multiply(aT, m); html += `<div class="matrix-display-container">${mtx.formatToHTML(aT)}<span class="operator">&middot;</span>${mtx.formatToHTML(m)}<span class="operator">=</span>${mtx.formatToHTML(aTa)}</div><h3>Step 3: Calculate the inverse of A<sup>T</sup>A</h3>`; const aTaInv = mtx.inverse(aTa); if (!aTaInv) { html += `<p class="explainer-text">The matrix A<sup>T</sup>A is singular and cannot be inverted. A unique least squares solution cannot be found.</p>`; } else { html += `<div class="matrix-display-container">${mtx.formatToHTML(aTaInv)}</div><h3>Step 4: Calculate A<sup>T</sup>b</h3>`; const aTb = mtx.multiply(aT, v.map(val => [val])).map(row => row[0]); html += `<div class="matrix-display-container">${mtx.formatToHTML(aT)}<span class="operator">&middot;</span>${mtx.formatToHTML(v)}<span class="operator">=</span>${mtx.formatToHTML(aTb)}</div><h3>Step 5: Final Calculation</h3><p class="explainer-text">Multiply (A<sup>T</sup>A)<sup>-1</sup> by A<sup>T</sup>b to get the final solution vector x.</p>`; const x = mtx.multiply(aTaInv, aTb.map(val => [val])).map(row => row[0]); html += `<div class="matrix-display-container">${mtx.formatToHTML(aTaInv)}<span class="operator">&middot;</span>${mtx.formatToHTML(aTb)}<span class="operator">=</span>${mtx.formatToHTML(x)}</div>`; } html += `</div>`; return html; }
@@ -845,11 +1176,24 @@ GitHub: https://github.com/treinart
         html += `<h3>Hessian Matrix</h3>
                 <p class="explainer-text">The Hessian matrix H is a square matrix of second-order partial derivatives of a scalar-valued function, f. It describes the local curvature of the function.</p>`;
 
-        const generalHessian = variables.length === 2
-            ? `H = \\begin{pmatrix} \\frac{\\partial^2 f}{\\partial x^2} & \\frac{\\partial^2 f}{\\partial x \\partial y} \\\\ \\frac{\\partial^2 f}{\\partial y \\partial x} & \\frac{\\partial^2 f}{\\partial y^2} \\end{pmatrix}`
-            : `H = \\begin{pmatrix} \\frac{\\partial^2 f}{\\partial x^2} & \\frac{\\partial^2 f}{\\partial x \\partial y} & \\frac{\\partial^2 f}{\\partial x \\partial z} \\\\ \\frac{\\partial^2 f}{\\partial y \\partial x} & \\frac{\\partial^2 f}{\\partial y^2} & \\frac{\\partial^2 f}{\\partial y \\partial z} \\\\ \\frac{\\partial^2 f}{\\partial z \\partial x} & \\frac{\\partial^2 f}{\\partial z \\partial y} & \\frac{\\partial^2 f}{\\partial z^2} \\end{pmatrix}`;
+        const formatPartialCell = (rowVar, colVar) => {
+            const denominator = rowVar === colVar
+                ? `&part;${rowVar}<sup>2</sup>`
+                : `&part;${rowVar}&part;${colVar}`;
+            return `<span class="math-frac"><span>&part;<sup>2</sup>f</span><span>${denominator}</span></span>`;
+        };
+        const formatSymbolicMatrix = rows => {
+            let matrixHTML = '<div class="matrix-bracket symbolic-matrix"><div class="matrix-content"><table><tbody>';
+            rows.forEach(row => {
+                matrixHTML += '<tr>';
+                row.forEach(cell => { matrixHTML += `<td>${cell}</td>`; });
+                matrixHTML += '</tr>';
+            });
+            return matrixHTML + '</tbody></table></div></div>';
+        };
+        const generalHessian = variables.map(rowVar => variables.map(colVar => formatPartialCell(rowVar, colVar)));
 
-        html += `<div class="formula-box">$$ ${generalHessian} $$</div>
+        html += `<div class="formula-box hessian-formula"><span class="operator">H =</span>${formatSymbolicMatrix(generalHessian)}</div>
                 <h3>Step 1: Calculate First-Order Partial Derivatives</h3>`;
 
         const firstDerivs = {};
@@ -1003,8 +1347,38 @@ GitHub: https://github.com/treinart
         function getMinimalPolynomialExplanation(m) {
             let html = '<div class="explainer-container">';
             html += `<h3>Minimal Polynomial</h3>
-                    <p class="explainer-text">The minimal polynomial of a matrix A is the polynomial of least degree which, when A is substituted into it, yields the zero matrix.</p>
-                    <p class="explainer-text mt-8"><strong>Finding the minimal polynomial requires symbolic computation of determinants and is beyond the scope of this step-by-step calculator. The conceptual overview is provided.</strong></p>`;
+                    <p class="explainer-text">The minimal polynomial of a matrix A is the lowest-degree monic polynomial m<sub>A</sub>(&lambda;) where m<sub>A</sub>(A) = 0.</p>`;
+
+            const isDiagonal = m.every((row, r) => row.every((val, c) => r === c || Math.abs(val) < 1e-9));
+            const uniqueValues = values => values.reduce((acc, val) => acc.some(existing => Math.abs(existing - val) < 1e-9) ? acc : [...acc, val], []);
+            const factor = val => Math.abs(val) < 1e-9 ? '&lambda;' : val < 0 ? `(&lambda; + ${mtx.smartFormat(Math.abs(val))})` : `(&lambda; - ${mtx.smartFormat(val)})`;
+            let polynomial = null;
+            let note = '';
+
+            if (isDiagonal) {
+                const diagonalValues = uniqueValues(m.map((row, i) => row[i]));
+                polynomial = diagonalValues.map(factor).join('');
+                note = 'For a diagonal matrix, the minimal polynomial has one factor for each distinct diagonal value.';
+            } else if (m.length === 2) {
+                const eigenvals = uniqueValues(mtx.eigenvalues(m));
+                if (eigenvals.length === 1) {
+                    const lambda = eigenvals[0];
+                    const scalarMatrix = mtx.isEqual(m, [[lambda, 0], [0, lambda]]);
+                    polynomial = `${factor(lambda)}${scalarMatrix ? '' : '<sup>2</sup>'}`;
+                    note = scalarMatrix ? 'This matrix is already a scalar multiple of the identity.' : 'This 2x2 matrix has one repeated eigenvalue and is not a scalar matrix, so the repeated factor is squared.';
+                } else if (eigenvals.length === 2) {
+                    polynomial = eigenvals.map(factor).join('');
+                    note = 'This 2x2 matrix has two distinct real eigenvalues, so the minimal polynomial is the product of those two linear factors.';
+                }
+            }
+
+            if (polynomial) {
+                html += `<h3>Result</h3>
+                        <div class="formula-box">m<sub>A</sub>(&lambda;) = ${polynomial}</div>
+                        <p class="explainer-text mt-8">${note}</p>`;
+            } else {
+                html += `<p class="explainer-text mt-8"><strong>This calculator currently supports minimal polynomial calculations for diagonal matrices and 2x2 matrices with real eigenvalues.</strong></p>`;
+            }
             html += '</div>';
             return html;
         }
@@ -1012,9 +1386,23 @@ GitHub: https://github.com/treinart
         function getMatrixFunctionsExplanation(m) {
             let html = '<div class="explainer-container">';
             html += `<h3>Matrix Exponential / Powers</h3>
-                    <p class="explainer-text">Matrix functions like the exponential (e<sup>A</sup>) or powers (A<sup>n</sup>) are often calculated using diagonalization or other advanced techniques.</p>
-                    <p class="explainer-text mt-8">For example, if A = PDP<sup>-1</sup>, then A<sup>n</sup> = PD<sup>n</sup>P<sup>-1</sup>, which is much easier to compute.</p>
-                    <p class="explainer-text mt-8"><strong>A full calculation is beyond the scope of this calculator, but the concept is based on these principles.</strong></p>`;
+                    <p class="explainer-text">Matrix powers are found by repeatedly multiplying the matrix by itself. For diagonal matrices, e<sup>A</sup> is found by applying e<sup>x</sup> to each diagonal entry.</p>`;
+
+            const aSquared = mtx.multiply(m, m);
+            const aCubed = mtx.multiply(aSquared, m);
+            html += `<h3>Matrix Powers</h3>
+                    <div class="matrix-display-container"><span class="operator">A<sup>2</sup> =</span>${mtx.formatToHTML(aSquared)}</div>
+                    <div class="matrix-display-container"><span class="operator">A<sup>3</sup> =</span>${mtx.formatToHTML(aCubed)}</div>`;
+
+            const isDiagonal = m.every((row, r) => row.every((val, c) => r === c || Math.abs(val) < 1e-9));
+            if (isDiagonal) {
+                const expA = m.map((row, r) => row.map((val, c) => r === c ? Math.exp(val) : 0));
+                html += `<h3>Matrix Exponential</h3>
+                        <p class="explainer-text">Because A is diagonal, e<sup>A</sup> is diagonal with e raised to each original diagonal entry.</p>
+                        <div class="matrix-display-container"><span class="operator">e<sup>A</sup> =</span>${mtx.formatToHTML(expA)}</div>`;
+            } else {
+                html += `<p class="explainer-text mt-8"><strong>Exact e<sup>A</sup> for non-diagonal matrices requires diagonalization or a series method that is not currently implemented here, but the power calculations above are exact.</strong></p>`;
+            }
             html += '</div>';
             return html;
         }
@@ -1176,7 +1564,7 @@ GitHub: https://github.com/treinart
                 for (let i=0; i < m.length; i++) {
                     html += `<h3>Step ${i+2}: Solve for x<sub>${i+1}</sub></h3>
                             <p class="explainer-text">Replace column ${i+1} of A with vector b to create matrix A<sub>${i+1}</sub>, then find its determinant.</p>`;
-                    const Ai = mtx.transpose(m.map((row, rIndex) => row.map((val, cIndex) => cIndex === i ? v[rIndex] : val)));
+                    const Ai = m.map((row, rIndex) => row.map((val, cIndex) => cIndex === i ? v[rIndex] : val));
                     const detAi = mtx.determinant(Ai);
                     solutions.push(detAi / detA);
                     html += `<div class="matrix-display-container">A<sub>${i+1}</sub> = ${mtx.formatToHTML(Ai)}</div>
@@ -1618,7 +2006,6 @@ GitHub: https://github.com/treinart
                         resultsArea.innerHTML = result;
                     }
 
-                    if (window.renderMathInElement) renderMathInElement(resultsArea, { delimiters: [{left: '$$', right: '$$', display: true}] });
                 } catch (e) {
                     console.error(e);
                     resultsArea.innerHTML = `<div class="explainer-container"><h3 style="color:var(--red-accent);">Error</h3><p class="explainer-text">An error occurred during calculation. Please check your inputs.</p><div class="formula-box" style="text-align:left; font-family: Inter, sans-serif;">${e.message}</div></div>`
